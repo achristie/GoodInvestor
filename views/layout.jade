@@ -1,13 +1,19 @@
 doctype html
-html
+html(ng-app='app')
   head
     title= title
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
 
-    script(src='https://code.jquery.com/jquery-2.1.3.min.js')
+    script(src='//code.jquery.com/jquery-2.1.3.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-animate.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js')
+    script(src='/javascripts/d3.js')
     script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js')
     script(src='/javascripts/app.js')
+
+    script(src='/javascripts/GICtrl.js')
   body
     block content

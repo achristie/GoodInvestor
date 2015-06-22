@@ -1,10 +1,5 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
-
 	.container-fluid
-		.row
-			.col-xs-12
-				#chart
+		div(ui-view='main')

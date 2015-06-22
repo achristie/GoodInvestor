@@ -1,4 +1,26 @@
-$(function () {
+var app = angular.module('app', ['ngAnimate', 'd3', 'ui.router'])
+
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $provide) {
+	$urlRouterProvider.otherwise('/');
+
+	$locationProvider.html5Mode({
+		enabled: true,
+		requireBase: false
+	});
+
+	$stateProvider
+		.state('app', {
+			url: '/',
+			views:{
+				'main': {
+					templateUrl: '/partials/index.jade',
+					controller: 'GICtrl'
+				}
+			}
+		});
+});
+
+/*$(function () {
 	var getData = function () {
 		return $.ajax({
 			url: 'https://davos.app.ipreo.com/rest/API/andrew/GGH2.svc?$components=InvestorFilingDates,Ownership&$format=json&$callback=?',
@@ -92,3 +114,4 @@ $(function () {
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 });
+*/

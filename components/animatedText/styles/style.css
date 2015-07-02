@@ -1,0 +1,25 @@
+.ipreo-animated-text.ng-enter, 
+.ipreo-animated-text.ng-leave, 
+.ipreo-animated-text.ng-move {
+	-webkit-transition: 0.5s linear all;
+	transition: 0.5s linear all;
+	position:relative;
+}
+
+.ipreo-animated-text.ng-enter {
+	top: -20px;
+	opacity: 0;
+	left: 0;
+}
+
+.ipreo-animated-text.ng-enter.ng-enter-active,
+.ipreo-animated-text.ng-leave {
+	top: 0; 
+	opacity: 1;
+	position: absolute;
+}
+
+.ipreo-animated-text.ng-leave.ng-leave-active {
+	top: 20px;
+	opacity: 0;
+}

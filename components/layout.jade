@@ -2,8 +2,7 @@ doctype html
 html(ng-app='app')
   head
     title= title
-    include commonIncludes
-
-    script(src='/javascripts/GICtrl.js')
+    include ..\views\commonIncludes
+    block head
   body
     block content

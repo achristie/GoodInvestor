@@ -1,1 +1,17 @@
-h1 Animated Text Test Page
+extends ..\layout
+
+block head
+	link(rel='stylesheet', href='animatedtext/styles/style.css')
+	script(src='animatedtext/scripts/ipreoAnimatedText.js')
+	script(src='animatedtext/test/controller.js')
+
+block content
+	h1 Animated Text Test Page
+
+	div(ng-controller='TestCtrl')
+
+		ul
+			li(ng-repeat='c in choices')
+				a(ng-click='click(c)') {{c}}
+
+		h2(ipreo-animated-text, t='t')
